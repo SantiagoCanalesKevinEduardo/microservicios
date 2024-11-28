@@ -1,0 +1,47 @@
+version: '3'
+services:
+  ### Postgres Database for inventory
+    db-inventory:
+        image: postgres:15.2
+        container_name: inventory-db
+        restart: unless-stopped
+        environment:
+          POSTGRES_USER: n3v1n
+          POSTGRES_PASSWORD: onepiece123
+          POSTGRES_DB: ms_inventory
+        ports:
+        - "5431:5431"
+        expose:
+          - 5431
+        command: -p 5431
+
+    ### Mysql Database for Orders
+    db-orders:
+        image: mysql:8.0.33
+        container_name: orders-db
+        restart: unless-stopped
+        environment:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: ms_orders
+          MYSQL_USER: n3v1n
+          MYSQL_PASSWORD: onepiece123
+        ports:
+        - "3306:3306"
+        expose:
+          - 3306
+
+
+    ### Postgres Database for Product
+    db-product:
+        image: postgres:15.2
+        container_name: product-db
+        restart: unless-stopped
+        environment:
+          POSTGRES_USER: n3v1n
+          POSTGRES_PASSWORD: onepiece123
+          POSTGRES_DB: ms_product
+        ports:
+        - "5432:5432"
+        expose:
+          - 5432
+        command: -p 5432
