@@ -25,7 +25,15 @@
 		<tag/>
 		<url/>
 	</scm>
+
+	<modules>
+		<module>api-gateway</module>
+		<module>inventory-service</module>
+		<module>product-service</module>
+		<module>order-service</module>
+	</modules>
 	<properties>
+		<spring-cloud.version>2023.0.0</spring-cloud.version>
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -33,7 +41,6 @@
 	<dependencies>
 
 	</dependencies>
-
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -46,12 +53,6 @@
 		</dependencies>
 	</dependencyManagement>
 
-	<modules>
-		<module>inventory-service</module>
-		<module>product-service</module>
-		<module>order-service</module>
-		<module>api-gateway</module>
-	</modules>
 	<build>
 		<plugins>
 
