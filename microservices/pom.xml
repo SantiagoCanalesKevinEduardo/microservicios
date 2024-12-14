@@ -52,11 +52,11 @@
 		<module>inventory-service</module>
 		<module>product-service</module>
 		<module>order-service</module>
+		<module>discovery-server</module>
 	</modules>
 	<build>
 		<plugins>
 
 		</plugins>
 	</build>
-
 </project>
